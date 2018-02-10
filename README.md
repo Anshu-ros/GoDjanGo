@@ -1,0 +1,2 @@
+# mysite
+Playing with django !!
