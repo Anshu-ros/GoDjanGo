@@ -1,0 +1,55 @@
+body {
+	margin: 0 auto;
+	background-image: url("images/backgrd.jpg");
+	background-size: 100% 700px;
+}
+.container{
+	width: 500px;
+	height: 400px;
+	text-align: center;
+	background-color: rgba(211, 211, 211,0.6);
+	border-radius: 4px;
+	margin: 0 auto;
+	margin-top: 150px;
+}
+input[type="text"],input[type="password"]{
+	height: 45px;
+	width: 300px;
+	font-size: 18px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	padding-left: 50px;
+}
+.form{
+	margin-top: 50px;
+}
+.form-input::before{
+	content: "\f007";
+	position: absolute;
+	font-family: "FontAwesome";
+	padding-left: 5px;
+	color: #696969;
+	font-size: 35px;
+}
+.form-input:nth-child(2)::before{
+	content: "\f023";
+}
+.btn-login{
+	padding: 15px 30px;
+	color: #fff;
+	background-color: #2ECC71;
+	border: none;
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+a{
+
+}
+.avatar{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	position: absolute;
+	top: -50%;
+	left: calc(50% - 50px);
+}
