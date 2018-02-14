@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<html>
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+    </head>
+
+{% block content %}
+<body class="main-page" style="background-color: #dddddd;">
+	{% for student in yd %}
+	<h2>Personal details</h2>
+	<p>Name - {{ student.first_name }} {{ student.last_name }}</p>
+	<p>Enrollment number - {{ student.title }}</p>
+	<p>Email Address - {{ student.email_address }}</p>
+	<p>Mother's name - {{ student.mothers_name }}</p>
+	<p>Father's name - {{ student.fathers_name }}</p>
+	<p>Nationality - {{ student.nationality }}</p>
+
+	<table>
+        <h2>Academic Details</h2>
+          <tbody style="">
+            <tr style="background-color: #c1cdc1;"><td style="text-align: left; border: 1px"><h4>Subject's name</h4></td><td style="text-align: left; border: 1px"><h4>Marks Obtained</h4></td><td style="text-align: left; border: 1px"><h4>Grade</h4></td></tr>
+            <tr><td style="text-align: left; border: 1px"><p>EMIP320C</p></td><td style="text-align: left; border: 1px"><p>{{ student.emip_marks }}</p></td><td style="text-align: left; border: 1px"><p>{{ student.emip_grade }}</p></td></tr>
+            <tr style="background-color: #c1cdc1;"><td style="text-align: left; border: 1px"><p>EMWE320C</p></td><td style="text-align: left; border: 1px"><p>{{ student.emwe_marks }}</p></td><td style="text-align: left; border: 1px"><p>{{ student.emwe_grade }}</p></td></tr>
+            <tr><td style="text-align: left; border: 1px"><p>ESAS320C</p></td><td style="text-align: left; border: 1px"><p>{{ student.esas_marks }}</p></td><td style="text-align: left; border: 1px"><p>{{ student.esas_grade }}</p></td></tr>
+            <tr style="background-color: #c1cdc1;"><td style="text-align: left; border: 1px"><p>EICT320C</p></td><td style="text-align: left; border: 1px"><p>{{ student.eict_marks }}</p></td><td style="text-align: left; border: 1px"><p>{{ student.eict_grade }}</p></td></tr>
+            <tr><td style="text-align: left; border: 1px"><p>EEMP320C</p></td><td style="text-align: left; border: 1px"><p>{{ student.eemp_marks }}</p></td><td style="text-align: left; border: 1px"><p>{{ student.eemp_grade }}</p></td></tr>
+            <tr style="background-color: #c1cdc1;"><td style="text-align: left; border: 1px"><p>EMMP320C</p></td><td style="text-align: left; border: 1px"><p>{{ student.emmp_marks }}</p></td><td style="text-align: left; border: 1px"><p>{{ student.emmp_grade }}</p></td></tr>
+          </tbody>
+        </table>
+	{% endfor %}
+</body>
+{% endblock %}
+</html>

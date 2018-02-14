@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<html>
+<head>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'blog/stylesheet.css' %}">
+</head>
+{% block content %}
+<body>
+  <div class="container">
+  	<img src="images/iiita_logo" class="avatar">
+  	<h3><marquee scrollamount=4>Student Registration Portal</marquee></h3>
+  	<form class="form">
+  		<div class="form-input">
+  			<input type="text" name="username" placeholder="enter username">
+  		</div> 
+  		<div class="form-input">
+  			<input type="password" name="password" placeholder="enter password">
+  		</div>
+  		<input type="submit" name="submit" value="LOGIN" class="btn-login">
+  		<a href="#">Forgot Password?</a>
+  	</form>
+  </div>
+  </body>
+{% endblock %}
+</html>

@@ -1,0 +1,7 @@
+<body>
+<ul>
+    {% for student in all_students %}
+    <li><a href="/blog/student/{{ student.id }}/">{{ student.title }}</a></li>
+    {% endfor %}
+</ul>
+</body>
