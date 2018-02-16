@@ -21,6 +21,10 @@
   		<input type="submit" name="submit" value="LOGIN" class="btn-login">
   		<a href="#">Forgot Password?</a>
   	</form>
+    <p><strong>-- OR --</strong></p>
+    <div class="auth">
+      <a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a><br>
+    </div>
   </div>
   </body>
 {% endblock %}

@@ -1,0 +1,23 @@
+{% extends "blog/base.html" %}
+
+
+{% block content %}
+<body>
+  <div class="container">
+    <img src="images/iiita_logo" class="avatar">
+    <h3><marquee scrollamount=4>Student Registration Portal</marquee></h3>
+    <form class="form">
+      <div class="form-input">
+        <input type="text" name="username" placeholder="enter username">
+      </div> 
+      <div class="form-input">
+        <input type="password" name="password" placeholder="enter password">
+      </div>
+      <input type="submit" name="submit" value="LOGIN" class="btn-login">
+      <a href="#">Forgot Password?</a>
+    </form>
+    <p><strong>-- OR --</strong></p>
+     <a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a><br>
+  </div>
+  </body>
+{% endblock %}

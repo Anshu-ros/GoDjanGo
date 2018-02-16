@@ -7,6 +7,11 @@ from django.views import generic
 from django.template import loader
 from .models import Student
 from .forms import studentpanel 
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def login(request):
+	return render(request, 'blog/login.html',{})
 
 def index(request,):
 	
